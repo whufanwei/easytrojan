@@ -39,10 +39,10 @@ check_cmd () { command -v "$1" &>/dev/null; }
 
 case $(uname -m) in
     x86_64)
-        caddy_url=https://github.com/autoxtls/easytrojan/releases/download/2.7.5/caddy_amd64
+        caddy_url=https://github.com/whufanwei/easytrojan/releases/download/2.7.5/caddy_amd64
         ;;
     aarch64)
-        caddy_url=https://github.com/autoxtls/easytrojan/releases/download/2.7.5/caddy_arm64
+        caddy_url=https://github.com/whufanwei/easytrojan/releases/download/2.7.5/caddy_arm64
         ;;
     *) 
         echo "Error: Your system version does not support"
@@ -259,4 +259,4 @@ echo -e "$nip_domain | Port: 443 | Password: $trojan_passwd | Alpn: h2,http/1.1\
 echo -e "Trojan Link:" | tee -a /etc/caddy/trojan.link
 echo -e "$trojan_link\n" | tee -a /etc/caddy/trojan.link
 echo -e "You can share your Trojan link securely with the website:" | tee -a /etc/caddy/trojan.link
-echo -e "https://autoxtls.github.io/base64.html#$base64_link\n" | tee -a /etc/caddy/trojan.link
+echo -e "https://whufanwei.github.io/base64.html#$base64_link\n" | tee -a /etc/caddy/trojan.link
