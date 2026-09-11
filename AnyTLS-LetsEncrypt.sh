@@ -53,7 +53,7 @@ force_register_shortcut() {
 if [[ -f /root/any.sh ]]; then
     bash /root/any.sh "$@"
 else
-    bash <(curl -fsSL https://raw.githubusercontent.com/meng-jin/AnyTLS/main/Any.sh) "$@"
+    bash <(curl -fsSL https://raw.githubusercontent.com/whufanwei/easytrojan/refs/heads/main/AnyTLS-LetsEncrypt.sh) "$@"
 fi
 EOF
         chmod +x "$path" 2>/dev/null || true
