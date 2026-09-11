@@ -4,9 +4,7 @@ umask 077
 
 # ------------------------------------------------------------------------------
 # AnyTLS + Let's Encrypt 多用户管理脚本
-# 基于原 AnyTLS-LetsEncrypt(1).sh 优化
-# 仅部署 AnyTLS，不包含 AnyReality
-#
+
 # 主要功能：
 #   1. 安装 / 重构 AnyTLS
 #   2. 服务管理（启动 / 停止 / 重启）
@@ -735,7 +733,6 @@ install_node() {
     if systemctl restart "$SERVICE_NAME"; then
         if systemctl is-active --quiet "$SERVICE_NAME"; then
             log_success "AnyTLS 已成功启动！"
-            log_success "客户端不需要 insecure=1，使用 Let's Encrypt 正常 TLS 证书校验。"
         else
             log_error "Sing-Box 启动失败，请查看日志。"
             systemctl status "$SERVICE_NAME" --no-pager || true
