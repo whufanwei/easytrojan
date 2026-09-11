@@ -5,7 +5,7 @@
 anytls 安装：
 
 ```
-bash <(wget -qO- https://raw.githubusercontent.com/whufanwei/easytrojan/refs/heads/main/AnyTLS-LetsEncrypt.sh)
+bash <(wget -qO- https://raw.githubusercontent.com/whufanwei/easytrojan/refs/heads/main/AnyTLS-LetsEncrypt-MultiUser.sh)
 ```
 ---
 
