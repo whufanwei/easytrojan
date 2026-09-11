@@ -169,7 +169,7 @@ install_dependencies() {
 
     if command_exists apt-get; then
         apt-get update -y -qq
-        DEBIAN_FRONTEND=noninteractive apt-get install -y -qq curl jq net-tools openssl lsof certbot
+        apt-get install -y -qq curl jq net-tools openssl lsof certbot
     elif command_exists dnf; then
         dnf install -y -q curl jq net-tools openssl lsof certbot
     elif command_exists yum; then
